@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/parkingLot/librairies/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css  " />
+    <link rel="stylesheet" href="/parkinglot/styles/parkinglot.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="/parkingLot/librairies/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Bike Finder</title>
+</head>
+<body>
+    <section id="Home" data-role="page" data-add-back-btn="true" data-theme="d">
+        <div data-role="panel" data-position="right" data-display="overlay" id="Apropos" class="ui-content" data-theme="b">
+            <h3>A propos...</h3>
+            <p>Bike finder</p>
+            <p>Author : Rémy Delmas</p>
+            <p>Version : 0.1</p>
+            <p>Date :  October 12 , 2016</p>
+            <a href="#Home" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left ui-btn-inline">Close</a>
+        </div>
+        <header data-role="header" data-theme="b">
+            <h1>Bicycle Finder</h1>
+        </header>
+        <div class="content" data-role="content">
+            <div id="logo"><img src="/parkinglot/images/bicycle.png" /></div>
+        </div>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#Apropos" class="ui-btn ui-btn-inline ui-corner-all">About...</a></li>
+                    <li><a href="#parkings">Go</a></li>
+                </ul>
+            </div>
+        </footer>
+    </section>
+
+    <section id="poubelle" data-role='page' data-theme='b'>
+
+        <header data-role='header'>
+        </header>
+        <div class="content" data-role="content">
+            <div id="container-map-initial" >
+
+            </div>
+        </div>
+     
+        <footer data-role='footer' data-position='fixed' data-theme='b'>
+            <h1>copyright 2012 - CESI</h1>
+        </footer>
+    </section>
+
+
+    <section id="parkings" data-role="page" data-theme="b">
+        <header data-role="header" data-theme="b" data-position="fixed">
+            <a href="#Home" data-theme="d" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc"></a>
+            <h1>Bike stations Toulouse</h1>
+        </header>
+        <div class="content" data-role="content">
+            <form class="ui-filterable">
+                <input id="autocomplete-input" data-type="search"  placeholder="Chercher une station..."/>
+            </form>
+
+            <ul id="liste-velo" data-role="listview" data-autodividers="true" data-inset="true" data-filter="true" data-filter-reveal="false" data-input="#autocomplete-input"></ul>
+        </div>
+        <footer data-role="footer" data-position="fixed" data-theme="b"><h1></h1></footer>
+    </section>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBq_t5qPHzeth6FRotgPoStA3uJP-ZTrxY"></script>
+    <script src="ParkingLot.js"></script>
+    
+</body>
+</html>
